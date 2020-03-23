@@ -1,0 +1,21 @@
+# /translations/messages.fr.yaml
+produit:
+  titre: 'Liste des produits'
+  no: "Il n'y a pas de produit"
+  ajout: 'Ajouter un produit'
+  ajout_panier: 'Ajouter au panier'
+  there_is: 'Il y a nb produits'
+
+panier:
+  titre: 'Contenu du panier'
+  no: 'La panier est vide'
+  sup: 'Supprimer'
+
+file:
+  error: "Le fichier n'a pas pu etre uploadé"
+  
+Nom: 'Nom'
+Qte: 'Quantité'
+Prix: 'Prix'
+Photo: 'Photo'
+Montant: 'Montant'

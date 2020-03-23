@@ -1,0 +1,23 @@
+# /translations/messages.en.yaml
+produit:
+  titre: 'Products list'
+  ajout: 'Add a product'
+  ajout_panier: 'Add to cart'
+  no: 'There is no product'
+  there_is: 'There is nb products'
+
+panier:
+  titre: 'Cart content'
+  no: 'Cart is empty'
+  sup: 'Delete'
+
+  
+file:
+  error: "The file can't be upload"
+ 
+Nom: 'Name'
+Qte: 'Quantity'
+Prix: 'Price'
+Photo: 'Photo'
+Montant: 'Amount'
+  

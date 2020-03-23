@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+
+    <h1>{{ 'produit.titre'|trans }}</h1>
+    {% if produits is not empty %}
+        <p>
+            {{ 'produit.there_is'|trans({'nb':produits|length}) }}
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{ 'Nom'|trans }}</th>
+                    <th>{{ 'Photo'|trans }}</th>
+                    <th>{{ 'Qte'|trans }}</th>
+                    <th>{{ 'Prix'|trans }}</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produit in produits %}
+                    <tr>
+                    <td>
+                            <a href="{{ path('un_produit', {'id':produit.id}) }}">
+                                {{ produit.nom }}
+                            </a>
+                        <td>{% if produit.image is not null %}
+		                    <img src="{{ asset('uploads/' ~ produit.image) }}">
+	                        {% endif %} </td>
+                        <td>{{ produit.qte }}</td>
+                        <td>{{ produit.prix }}€</td>
+                        <td>
+                            <a href="{{ path('produit_delete', {'id':produit.id}) }}">
+                                {{ 'panier.sup'|trans }}
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>{{ 'produit.no'|trans }}</p>
+    {% endif %}
+
+    <h2>{{ 'produit.ajout'|trans }}</h2>
+    {{ form(form_produit_new) }}
+
+{% endblock %}
